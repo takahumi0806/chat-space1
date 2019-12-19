@@ -1,0 +1,37 @@
+.chat-main
+  .chat-main__group-info
+    .chat--group
+      .chat--group__name
+        グループ    
+      .chat--group__member
+        Member :
+    =link_to "#", class: "chat--group__edit-btn" do
+      Edit
+  .chat-main__message
+    .message
+      .message__chat
+        .message__upname
+          yabu
+        .message__uptime
+          2019/12/16(mon)18:54:47
+      .message__comment
+        メッセージ
+    .message
+      .message__chat
+        .message__upname
+          yabu
+        .message__uptime
+          2019/12/16(mon)20:54:47
+      .message__comment
+        テックエキスパート
+  .chat-main__form
+    .new
+      .new__message
+        .new__commentbox
+          type a message
+        .new__image
+          %label{class: "new__image--icon"}
+            = icon("far", "image")
+            %input{type: "file",class: "new__image__file"}
+      .new__send
+        send
