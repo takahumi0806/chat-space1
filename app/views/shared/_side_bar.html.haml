@@ -12,10 +12,9 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .btm-group
-        = link_to '#' do
-          .btm-group__name
-            = link_to "#", class: "btm-group__link" do
-              = group.name
-          .btm-group__message
-            = link_to "#", class: "btm-group__messagelink" do
-              まだメッセージは有りません
+        .btm-group__name
+          = link_to group_messages_path(group), class: "btm-group__link" do
+            = group.name
+        .btm-group__message
+          = link_to group_messages_path(group), class: "btm-group__messagelink" do
+            = group.show_last_message
