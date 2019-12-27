@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
+    
   end
 
   def new
@@ -19,11 +20,12 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    
   end
 
   def update
     if @group.update(group_params)
-      redirect_to root_path, notice: 'グループを更新しました'
+      redirect_to group_messages_path(params[:id]), notice: 'グループを更新しました'
     else
       render :edit
     end
