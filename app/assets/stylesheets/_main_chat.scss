@@ -1,5 +1,6 @@
 $white: #ffffff;
 $light-blue: #38AEF0;
+$black: #333333;
 
 .chat-main{
   width: calc(100vw - 300px);
@@ -37,37 +38,43 @@ $light-blue: #38AEF0;
       top: 30px;
     }
   }
-  &__message{
+  .messages{
     background-color: #fafafa;
+    box-sizing: border-box;
     height: calc(100vh - 190px);
-    padding: 46px 40px;
+    padding: 40px 46px 0px ;
+    overflow: scroll;
   }
   .message{
     padding-bottom: 40px;
-    &__chat{
+    .upper-message{
       display: flex;
       margin-bottom: 10px;
+        &__user-name{
+          font-weight: bold;
+          color: $black;
+          font-size: 16px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+    .lower-message{
+      margin-top: 10px;
+      &__content{
+        color: #434A54;
+        font-size: 14px;
+        margin-bottom: 10px;
+        }
+      } 
     }
-    &__upname{
-      font-weight: bold;
-      color: #333333;
-      font-size: 16px;
-    }
-    &__uptime{
-      color: #999999;
-      font-size: 12px;
-      margin-left: 10px;
-    }
-    &__comment{
-      color: #434A54;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-  }
   &__form{
     background-color: #d2d2d2;
     height: 90px;
   }
+
   .form {
     background-color: #DDDDDD;
     box-sizing: border-box;
@@ -78,6 +85,7 @@ $light-blue: #38AEF0;
       float: left;
       height: 50px;
       width: calc(100% - 150px);
+      padding-left: 10px;
     }
     &__mask {
       background-color: $white;
