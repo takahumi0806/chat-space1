@@ -10,8 +10,7 @@
     =link_to edit_group_path(params[:group_id]), class: "chat--group__edit-btn" do
       Edit
   .messages
-    .message
-      = render @messages
+    = render @messages
 
   .form
     = form_for [@group, @message] do |f|
